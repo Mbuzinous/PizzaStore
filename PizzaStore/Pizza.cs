@@ -24,10 +24,11 @@ namespace PizzaStore
         }
         public override string ToString()
         {
-            return $"Nr:{_menuNumber}, Name {_name}, toppings {_topping}, Price {_price}kr";
+            return $"Nr:{_menuNumber} {_name} {_topping} {_price}";
         }
 
-        /*public int MenuNumber
+        /*
+        public int MenuNumber
         {
             get { return _menuNumber; }
         }
