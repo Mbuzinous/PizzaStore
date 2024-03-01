@@ -22,12 +22,7 @@ namespace PizzaStore
             _topping = Topping;
             _price = Price;
         }
-        public override string ToString()
-        {
-            return $"Nr:{_menuNumber} {_name} {_topping} {_price}";
-        }
-
-        /*
+        
         public int MenuNumber
         {
             get { return _menuNumber; }
@@ -46,6 +41,10 @@ namespace PizzaStore
         public int Price
         {
             get { return _price; }
-        }*/
+        }
+        public override string ToString()
+        {
+            return $"{_menuNumber}  {_name}\n   {_topping.PadRight(50)}{_price}KR\n";
+        }
     }
 }
