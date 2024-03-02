@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -10,41 +11,24 @@ namespace PizzaStore
 {
     internal class Pizza
     {
-        int _menuNumber;
-        string _name;
-        string _topping;
-        int _price;
+        private string _name;
+        private string _topping;
+        private int _price;
+        public int _menuNumber;
+        private static int _idCounter = 1;
 
-        public Pizza(int MenuNumber, string Name, string Topping, int Price)
+
+        public Pizza(string name, string topping, int price)
         {
-            _menuNumber = MenuNumber;
-            _name = Name;
-            _topping = Topping;
-            _price = Price;
+            _name = name;
+            _topping = topping;
+            _price = price;
+            _menuNumber = _idCounter++;
         }
         
-        public int MenuNumber
-        {
-            get { return _menuNumber; }
-        }
-
-        public string Name
-        {
-            get { return _name; }
-        }
-
-        public string Topping
-        {
-            get { return _topping; }
-        }
-
-        public int Price
-        {
-            get { return _price; }
-        }
         public override string ToString()
         {
-            return $"{_menuNumber}  {_name}\n   {_topping.PadRight(50)}{_price}KR\n";
+            return $"{_menuNumber}{"".PadRight(5)}{_name}\n{"".PadRight(6)}{_topping.PadRight(50)}{_price}\n";
         }
     }
 }

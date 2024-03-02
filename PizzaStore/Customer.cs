@@ -3,58 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PizzaStore
 {
     internal class Customer
     {
-        private int _id;
         private string _name;
+        public int _id;
+        private static int _idCounter = 100;
 
-        private int _choice1;
-        private int _choice2;
-        private int _choice3;
-        private string _choice4;
-
-        public Customer(int Id)
+        public Customer(string name)
         {
-            _id = Id;
+            _name = name;
+            _id = _idCounter++;
         }
 
-        public int Id
+        public override string ToString()
         {
-            get { return _id; }
+            return $"CustomerID: {_id}\nName: {_name}\n";
         }
-
-        public string Name
-        {
-            set { _name = value; }
-            get { return _name; }
-        }
-
-        public int Choice1
-        {
-            set { _choice1 = value; }
-            get { return _choice1; }
-        }
-
-        public int Choice2
-        {
-            set { _choice2 = value; }
-            get { return _choice2; }
-        }
-
-        public int Choice3
-        {
-            set { _choice3 = value; }
-            get { return _choice3; }
-        }
-
-        public string Choice4
-        {
-            set { _choice4 = value; }
-            get { return _choice4; }
-        }
-
     }
 }

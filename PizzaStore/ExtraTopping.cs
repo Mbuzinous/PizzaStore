@@ -8,7 +8,7 @@ namespace PizzaStore
 {
     internal class ExtraTopping
     {
-        private int _menuNumber;
+       /* private int _menuNumber;
         private string _name;
         private int _price;
 
@@ -21,8 +21,8 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"{_menuNumber}  {_name.PadRight(50)}{_price}kr\n";
-        }
+            return $"{_menuNumber}{"".PadRight(5)}{_name.PadRight(50)}{_price}KR\n";
+        }*/
     }
 
 }

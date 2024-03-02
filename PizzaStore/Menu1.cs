@@ -11,6 +11,7 @@ namespace PizzaStore
     internal class Menu1
     {
         //Pizza
+        /*
         Pizza pizza1 = new Pizza(1, "Margherita", "Tomato & Cheese", 69);
         Pizza pizza2 = new Pizza(2, "Vesuvio", "Tomato, Cheese & Ham", 75);
         Pizza pizza3 = new Pizza(3, "Capricciosa", "Tomato, Cheese, Ham & Mushrooms", 80);
@@ -24,9 +25,8 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"Pizze Classiche\n{pizza1}\n{pizza2}\n{pizza3}\n{pizza4}\n{pizza5}\n\n{extraTopping1}\n{extraTopping2}\n{extraTopping3}";
-        }
-
+            return $"{"Nr".PadRight(6)}{"Pizza".PadRight(50)}Price\n\n{pizza1}\n{pizza2}\n{pizza3}\n{pizza4}\n{pizza5}\n\n{"Nr".PadRight(6)}{"Toppings".PadRight(50)}Price\n\n{extraTopping1}\n{extraTopping2}\n{extraTopping3}";
+        }*/
 
     }
-    }
+}
