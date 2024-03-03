@@ -13,10 +13,9 @@ namespace PizzaStore
     {
         private string _name;
         private string _topping;
-        private int _price;
-        public int _menuNumber;
+        private double _price;
+        private int _menuNumber;
         private static int _idCounter = 1;
-
 
         public Pizza(string name, string topping, int price)
         {
@@ -25,10 +24,35 @@ namespace PizzaStore
             _price = price;
             _menuNumber = _idCounter++;
         }
-        
+
+        public string Name
+        {
+            get { return _name; }
+            private set { _name = value; }
+        }
+
+        public string Topping
+        {
+            get { return _topping; }
+            private set { _topping = value; }
+
+        }
+        public double Price
+        {
+            get { return _price; }
+            private set { _price = value; }
+        }
+
+        public int MenuNumber
+        {
+            get { return _menuNumber; }
+            private set { _menuNumber = value; }
+        }
+
+
         public override string ToString()
         {
-            return $"{_menuNumber}{"".PadRight(5)}{_name}\n{"".PadRight(6)}{_topping.PadRight(50)}{_price}\n";
+            return $"{MenuNumber}{"".PadRight(5)}{Name}\n{"".PadRight(6)}{Topping.PadRight(50)}{Price}\n";
         }
     }
 }
