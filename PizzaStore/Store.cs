@@ -8,13 +8,10 @@ using System.Xml.Linq;
 namespace PizzaStore
 {
     internal class Store
-    { 
+    {
         Pizza _pizza1, _pizza2, _pizza3;
         Customer _customer1, _customer2, _customer3;
         Order _order1, _order2, _order3;
-
-        private int _totalPrice;
-
 
         public Store()
         {
@@ -34,8 +31,6 @@ namespace PizzaStore
             _order1 = new Order(_customer1, _pizza1, _pizza1, _pizza3);
             _order2 = new Order(_customer2, _pizza2, _pizza1, _pizza2);
             _order3 = new Order(_customer3, _pizza3, _pizza3, _pizza2);
-
-
         }
 
         public override string ToString()

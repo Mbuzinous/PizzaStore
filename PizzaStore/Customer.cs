@@ -20,12 +20,12 @@ namespace PizzaStore
             _id = _idCounter;
             _idCounter++;
         }
+
         public string Name
         {
             get { return _name; }
             private set { _name = value; }
         }
-
         public int Id
         {
             get { return _id; }

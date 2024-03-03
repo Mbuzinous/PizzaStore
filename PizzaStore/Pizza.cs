@@ -31,25 +31,21 @@ namespace PizzaStore
             get { return _name; }
             private set { _name = value; }
         }
-
         public string Topping
         {
             get { return _topping; }
             private set { _topping = value; }
-
         }
         public double Price
         {
             get { return _price; }
             private set { _price = value; }
         }
-
         public int MenuNumber
         {
             get { return _menuNumber; }
             private set { _menuNumber = value; }
         }
-
 
         public override string ToString()
         {
