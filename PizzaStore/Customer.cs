@@ -11,17 +11,25 @@ namespace PizzaStore
     internal class Customer
     {
         private string _name;
-        public int _id;
+        private int _id;
         private static int _idCounter = 100;
+
         public Customer(string name)
         {
             _name = name;
-            _id = _idCounter++;
+            _id = _idCounter;
+            _idCounter++;
         }
         public string Name
         {
             get { return _name; }
-            set { _name = value; }
+            private set { _name = value; }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+            private set { _id = value; }
         }
 
         public override string ToString()

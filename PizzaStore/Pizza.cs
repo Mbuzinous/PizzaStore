@@ -22,7 +22,8 @@ namespace PizzaStore
             _name = name;
             _topping = topping;
             _price = price;
-            _menuNumber = _idCounter++;
+            _menuNumber = _idCounter;
+            _idCounter++;
         }
 
         public string Name

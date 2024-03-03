@@ -8,12 +8,8 @@ namespace PizzaStore
         {
             Store BigMama = new Store();
             BigMama.Start();
-
-
             Console.WriteLine(BigMama.ToString());
-
             Console.ReadKey();
-
         }
     }
 }
