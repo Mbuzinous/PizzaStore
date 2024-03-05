@@ -50,7 +50,12 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"{_customer} has ordered\n{_pizzaChoice1.Name.PadRight(20)}{_pizzaChoice1.Price}KR\n{_pizzaChoice2.Name.PadRight(20)}{_pizzaChoice2.Price}KR\n{_pizzaChoice3.Name.PadRight(20)}{_pizzaChoice3.Price}KR\nTotal Price: {CalculateTotalPrice()}\nOrderID: {_id}{"".PadRight(10)}Date: {_date.ToString("dd-MM-yy : Clock : HH:mm:ss:ff")}\n";
+            return $"{_customer} has ordered\n" +
+                $"{_pizzaChoice1.Name.PadRight(20)}{_pizzaChoice1.Price}KR\n" +
+                $"{_pizzaChoice2.Name.PadRight(20)}{_pizzaChoice2.Price}KR\n" +
+                $"{_pizzaChoice3.Name.PadRight(20)}{_pizzaChoice3.Price}KR\n" +
+                $"Total Price: {CalculateTotalPrice()}\n" +
+                $"OrderID: {_id}{"".PadRight(10)}Date: {_date.ToString("dd-MM-yy : Clock : HH:mm:ss:ff")}\n";
         }
     }
 }

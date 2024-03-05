@@ -9,9 +9,9 @@ namespace PizzaStore
 {
     internal class Store
     {
-        Pizza _pizza1, _pizza2, _pizza3;
-        Customer _customer1, _customer2, _customer3;
-        Order _order1, _order2, _order3;
+        private Pizza _pizza1, _pizza2, _pizza3;
+        private Customer _customer1, _customer2, _customer3;
+        private Order _order1, _order2, _order3;
 
         public Store()
         {
@@ -35,7 +35,12 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"--------------- Menu ---------------\n{"Nr".PadRight(6)}Pizza\n{_pizza1}\n{_pizza2}\n{_pizza3}\n--------------- Customers ---------------\n{_customer1}\n\n{_customer2}\n\n{_customer3}\n\n--------------- Orders ---------------\n{_order1}\n{_order2}\n{_order3}";
+            return $"--------------- Menu ---------------\n" +
+                $"{"Nr".PadRight(6)}Pizza\n{_pizza1}\n{_pizza2}\n{_pizza3}\n" +
+                $"--------------- Customers ---------------\n" +
+                $"{_customer1}\n\n{_customer2}\n\n{_customer3}\n" +
+                $"\n--------------- Orders ---------------\n" +
+                $"{_order1}\n{_order2}\n{_order3}";
         }
     }
 }
